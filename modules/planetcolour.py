@@ -27,7 +27,7 @@ except FileNotFoundError:
     mjd_label = 'noMJD'
 
 # build all your output filenames to include both dir and MJD
-OUT_BASE    = f"saturn_color_{dir_name}_{mjd_label}"
+OUT_BASE    = f"planet_color_{dir_name}_{mjd_label}"
 OUT_FITS       = OUT_BASE + '.fits'
 OUT_PNG        = OUT_BASE + '.png'
 OUT_PNG_SAT    = OUT_BASE + '_saturated.png'

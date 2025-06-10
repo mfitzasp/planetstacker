@@ -4,12 +4,12 @@ import subprocess
 from PIL import Image
 import glob
 
-MODULES = ["presaturning.py", "saturnstacking.py", "saturncolour.py"]
+MODULES = ["preplaneting.py", "planetstacking.py", "planetcolour.py"]
 MODULES_DIR = "modules"
-SATURN_DIR = "saturn"
-OUTPUT_FILE  = "saturn_color.fits"
+PLANET_DIR = "planet"
+OUTPUT_FILE  = "planet_color.fits"
 
-for entry in os.scandir(SATURN_DIR):
+for entry in os.scandir(PLANET_DIR):
     if not entry.is_dir():
         continue
 
@@ -50,7 +50,7 @@ for entry in os.scandir(SATURN_DIR):
         
 # Collect and sort all the “saturated” PNGs
 saturated_paths = []
-for entry in os.scandir(SATURN_DIR):
+for entry in os.scandir(PLANET_DIR):
     if not entry.is_dir():
         continue
     pattern = os.path.join(entry.path, '*saturated*.png')
@@ -66,7 +66,7 @@ else:
     frames = [Image.open(p) for p in saturated_paths]
 
     # Save as a looping GIF
-    out_gif = os.path.join(SATURN_DIR, 'saturn_saturated.gif')
+    out_gif = os.path.join(PLANET_DIR, 'planet_saturated.gif')
     frames[0].save(
         out_gif,
         save_all=True,

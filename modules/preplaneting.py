@@ -5,7 +5,7 @@ import sep
 from scipy.interpolate import NearestNDInterpolator
 
 # parameters
-INPUT_DIR  = 'saturn_images'
+INPUT_DIR  = 'planet_images'
 OUTPUT_DIR = 'processed'
 STAMP_SIZE = 600  # pixels
 first_mjd_written = False  # ← new
