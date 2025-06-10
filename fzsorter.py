@@ -12,7 +12,7 @@ for f in glob.glob('*.fits.fz'):
 
     target = str(reqnum)
     os.makedirs(target, exist_ok=True)
-    os.makedirs(target +'/saturn_images', exist_ok=True)
-    dest = target +'/saturn_images/' + f
+    os.makedirs(target +'/planet_images', exist_ok=True)
+    dest = target +'/planet_images/' + f
 
     shutil.move(str(f), str(dest))
