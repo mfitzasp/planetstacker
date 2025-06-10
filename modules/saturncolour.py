@@ -196,7 +196,7 @@ img_sat.save(OUT_PNG_SAT)
 
 channels = {
     'R': Rn,
-    'V': Gn,  # here 'V' stands in for your green/visual channel
+    'V': Gn,
     'B': Bn
 }
 
