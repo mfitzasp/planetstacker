@@ -8,7 +8,7 @@ from scipy.interpolate import NearestNDInterpolator
 INPUT_DIR  = 'planet_images'
 OUTPUT_DIR = 'processed'
 STAMP_SIZE = 600  # pixels
-first_mjd_written = False  # ← new
+first_mjd_written = False  
 
 def interp_nans(arr):
     """Fill NaNs in 2D array by nearest‐neighbor interpolation."""
